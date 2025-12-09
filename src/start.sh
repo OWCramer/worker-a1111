@@ -15,7 +15,7 @@ if [ -f "/workspace/models/model.safetensor" ]; then
     ARGS+=(--skip-python-version-check)
     ARGS+=(--skip-torch-cuda-test)
     ARGS+=(--skip-install)
-    ARGS+=(--ckpt "/workspace/models/model.safetensor")
+    ARGS+=(--ckpt "/runpod-volume/models/model.safetensor")
     ARGS+=(--opt-sdp-attention)
     ARGS+=(--disable-safe-unpickle)
     ARGS+=(--port 3000)
