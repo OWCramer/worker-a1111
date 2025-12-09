@@ -7,7 +7,7 @@ TCMALLOC="$(ldconfig -p | grep -Po "libtcmalloc.so.\d" | head -n 1)"
 export LD_PRELOAD="${TCMALLOC}"
 export PYTHONUNBUFFERED=true
 
-if [ -f "/workspace/models/model.safetensor" ]; then
+if [ -f "/runpod-volume/models/model.safetensor" ]; then
     declare -a ARGS
 
     ARGS+=(--xformers)
@@ -27,7 +27,7 @@ if [ -f "/workspace/models/model.safetensor" ]; then
 
     python /stable-diffusion-webui/webui.py "${ARGS[@]}" &
 else
-    echo "WARN: Model not found at /workspace/models/model.safetensor. Skipping WebUI start."
+    echo "WARN: Model not found at /runpod-volume/models/model.safetensor. Skipping WebUI start."
 fi
 
 echo "Starting RunPod Handler"
