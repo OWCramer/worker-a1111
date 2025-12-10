@@ -1,11 +1,11 @@
 {
   "input": {
-    "prompt": "a photo of an astronaut riding a horse on mars",
-    "negative_prompt": "blurry, bad quality",
-    "width": 512,
-    "height": 512,
-    "num_inference_steps": 20,
-    "guidance_scale": 7.5,
-    "seed": 42
+    "prompt": "A person standing in front of a fountain full color smooth",
+    "negative_prompt": "text, watermark, blurry, low quality, pixelation",
+    "steps": 25,
+    "cfg_scale": 7,
+    "width": 540,
+    "height": 960,
+    "sampler_name": "DPM++ SDE"
   }
 }
